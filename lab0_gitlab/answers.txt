@@ -1,0 +1,15 @@
+Lab part 1 - Create a repository
+
+1. What message appears after running git init? 
+Answer: Reinitialized existing Git repository in C:/Users/Student/Desktop/.git/
+
+2. What hidden folder was created? 
+Answer: .git, which allows the folder to see version control.
+
+Lab part 3 - Check repository status
+
+1. What color is the filename?
+Answer: The colour is red.
+
+2. What does "Untracked" mean?
+Answer: "Untracked" means that no commits have been made yet.
