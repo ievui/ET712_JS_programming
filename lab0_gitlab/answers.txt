@@ -1,15 +1,34 @@
 Lab part 1 - Create a repository
 
 1. What message appears after running git init? 
-Answer: Reinitialized existing Git repository in C:/Users/Student/Desktop/.git/
+Reinitialized existing Git repository in C:/Users/Student/Desktop/.git/
 
 2. What hidden folder was created? 
-Answer: .git, which allows the folder to see version control.
+.git, which allows the folder to see version control.
 
 Lab part 3 - Check repository status
 
 1. What color is the filename?
-Answer: The colour is red.
+The colour is red.
 
 2. What does "Untracked" mean?
-Answer: "Untracked" means that no commits have been made yet.
+"Untracked" means that the file hasn't been saved to the git folder.
+
+Lab part 4 - Stage Changes
+
+1. Why do you think Git requires a staging area?
+Git requires a staging area so that files can be selected easily.
+
+Lab part 5 - Commit Changes
+
+1. What is the commit message?
+The commit message is an record of any changes that have been made to a project.
+
+2. What is display after running git log?
+Author: aaliyah f <aaliyahfowlin30@gmail.com>
+Date:   Tue Sep 1 15:24:17 2026 -0400
+    README file created
+
+Lab Part 8 – Make Another Change
+1. Do you see the changes in the remote repository?
+I do not see all the changes from my answers.txt in the remote repository.
