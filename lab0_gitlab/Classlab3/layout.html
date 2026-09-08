@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern responsive landing page with pricing plans.">
+  <title>Launchly — Grow Your Business</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #172033;
+      background: #f8faff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    .navbar {
+      width: 100%;
+      padding: 20px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      border-bottom: 1px solid #edf0f6;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #635bff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #596174;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #635bff;
+    }
+
+    .nav-button {
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: #635bff;
+      color: #fff !important;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        radial-gradient(circle at top left, #e8e6ff 0, transparent 35%),
+        radial-gradient(circle at bottom right, #dff5ff 0, transparent 35%),
+        #ffffff;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: #eeecff;
+      color: #635bff;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #635bff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #626b7f;
+      font-size: 1.15rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 9px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #635bff;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #5149e8;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #172033;
+      border: 1px solid #dce1eb;
+    }
+
+    .btn-secondary:hover {
+      border-color: #635bff;
+      color: #635bff;
+    }
+
+    /* Pricing */
+    .pricing {
+      padding: 90px 6%;
+      background: #f8faff;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: #6b7385;
+    }
+
+    .pricing-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 34px;
+      background: #ffffff;
+      border: 1px solid #e3e7ef;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(30, 40, 70, 0.06);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid #635bff;
+      transform: translateY(-10px);
+    }
+
+    .popular {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: #635bff;
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .pricing-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .pricing-card .description {
+      color: #737b8c;
+      min-height: 50px;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      margin-bottom: 25px;
+    }
+
+    .price strong {
+      font-size: 2.8rem;
+      color: #172033;
+    }
+
+    .price span {
+      color: #737b8c;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 30px;
+      flex: 1;
+    }
+
+    .features li {
+      margin-bottom: 13px;
+      color: #4e5769;
+    }
+
+    .features li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: #635bff;
+      font-weight: 700;
+    }
+
+    .pricing-card .btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      padding: 35px 6%;
+      text-align: center;
+      color: #737b8c;
+      background: #ffffff;
+      border-top: 1px solid #edf0f6;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .pricing-card.featured {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .navbar {
+        padding: 16px 5%;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding: 70px 20px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .pricing {
+        padding: 70px 5%;
+      }
+
+      .pricing-card {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#" class="logo">Launchly</a>
+
+    <nav class="nav-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#features">Features</a>
+      <a href="#pricing" class="nav-button">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">🚀 Built for ambitious teams</div>
+
+        <h1>
+          Build faster.<br>
+          <span>Grow smarter.</span>
+        </h1>
+
+        <p>
+          Launchly gives your team everything you need to manage projects,
+          collaborate with your team, and grow your business — all in one place.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn btn-primary">
+            Start Free Trial
+          </a>
+
+          <a href="#pricing" class="btn btn-secondary">
+            View Pricing
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+      <div class="section-header">
+        <h2>Simple, transparent pricing</h2>
+        <p>
+          Choose the plan that works best for you. Upgrade or cancel whenever
+          you want.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <article class="pricing-card">
+          <h3>Starter</h3>
+
+          <p class="description">
+            Perfect for individuals and small projects.
+          </p>
+
+          <div class="price">
+            <strong>$0</strong>
+            <span>/month</span>
+          </div>
+
+          <ul class="features">
+            <li>Up to 3 projects</li>
+            <li>Basic analytics</li>
+            <li>5 GB storage</li>
+            <li>Email support</li>
+          </ul>
+
+          <a href="#" class="btn btn-secondary">
+            Get Started
+          </a>
+        </article>
+
+        <!-- Professional -->
+        <article class="pricing-card featured">
+          <div class="popular">MOST POPULAR</div>
+
+          <h3>Professional</h3>
+
+          <p class="description">
+            For growing teams that need more power.
+          </p>
+
+          <div class="price">
+            <strong>$29</strong>
+            <span>/month</span>
+          </div>
+
+          <ul class="features">
+            <li>Unlimited projects</li>
+            <li>Advanced analytics</li>
+            <li>100 GB storage</li>
+            <li>Priority support</li>
+            <li>Team collaboration</li>
+          </ul>
+
+          <a href="#" class="btn btn-primary">
+            Start Free Trial
+          </a>
+        </article>
+
+        <!-- Business -->
+        <article class="pricing-card">
+          <h3>Business</h3>
+
+          <p class="description">
+            Advanced tools for established businesses.
+          </p>
+
+          <div class="price">
+            <strong>$79</strong>
+            <span>/month</span>
+          </div>
+
+          <ul class="features">
+            <li>Everything in Professional</li>
+            <li>Unlimited storage</li>
+            <li>Custom integrations</li>
+            <li>Dedicated support</li>
+            <li>Advanced security</li>
+          </ul>
+
+          <a href="#" class="btn btn-secondary">
+            Contact Sales
+          </a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Launchly. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
