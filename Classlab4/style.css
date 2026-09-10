@@ -1,0 +1,62 @@
+h1.title{color:rgb(70, 17, 121);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+}
+p#subtitle{
+    text-align: right;
+    color: coral;
+    font-size: 20px;
+}
+.course , #subtitle{
+    font-family: fantasy;
+}
+h1.title::first-letter{
+    color: deeppink;
+    font-size: 40px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.font1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: left;
+  text-shadow: 1px 10px 2px rgba(143, 0, 0, 0.432);
+}
+
+.font2 {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: -9px 12px 4px rgba(7, 230, 211, 0.555);
+}
+
+.font3 {
+  font-family: "Courier New", "Fira Code", monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: right;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pageborder, .pageborder1, .pageborder2{
+    font-size: 30px;
+    border: dashed 5px crimson ;
+}
+.pageborder{
+    margin-left: 150px;
+    padding-top: 100px;
+}
+.pageborder1{
+    margin: 100px;
+    padding: 50px;
+}
+.pageborder2{
+    margin: 50px 150px;
+    padding: 1.5rem 80px;
+}
