@@ -1,0 +1,45 @@
+*{box-sizing: border-box;}
+.shapecontainer{
+    background-color: aquamarine;
+    border: solid darkcyan 5px;
+    width: 500px;
+    margin: auto;
+}
+.shape, .rectangle, .circle, .square{
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+    font-size: 20px;
+    padding: 10%;
+}
+.btnSquare, .btnRectangle, .btnCircle{
+    background-color: palevioletred;
+    border: 4px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    color: aliceblue;
+    width: 30%;
+    margin: 1%;
+}
+.btnSquare:hover, .btnRectangle:hover, .btnCircle:hover{
+    font-weight: bolder;
+    background-color: rgb(65, 65, 201);
+    cursor: pointer;
+}
+.rectangle{
+    width: 300px;
+    height: 200px;
+    background-color: crimson;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    border-radius: 50%;
+}
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
