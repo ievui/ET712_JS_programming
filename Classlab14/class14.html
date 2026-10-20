@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Aaliyah Fowlin</h1>
+    <h2>Window events</h2>
+    <section class="maincontainer">
+        <div class="gallerycontainer">
+            <img class="galleryimage" src="images/Spring.jpg" alt="images of spring">
+            <img class="galleryimage" src="images/Summer.jpg" alt="images of summer">
+            <img class="galleryimage" src="images/Autum.jpg" alt="images of autum">
+            <img class="galleryimage" src="images/Winter.jpg" alt="images of winter">
+        </div>
+
+        <button class="btnright">&#x276E;</button>
+        <button class="btnleft">&#x276E;</button>
+    </section>
+
+        <h2>Form events</h2>
+        <form id="myForm">
+            <div class="formsession">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" placeholder="Type username...">
+            </div>
+
+            <div class="formsession">
+                <label for="password">Password: </label>
+                <input type="text" id="password" placeholder="Enter a password...">
+                <p class="passwordmsg">Must be at least 8 characters</p>
+                <div id="passwordError">error</div>
+
+            </div>
+                <button type="submit" class="submitbtn">Submit</button>
+        </form>
+
+        <!-- display message using the data from the form-->
+         <div class="msg">
+         </div>
+
+    <script src="script14.js"></script>
+</body>
+</html>

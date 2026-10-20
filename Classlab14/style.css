@@ -1,0 +1,71 @@
+.maincontainer ,.gallerycontainer{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+}
+.maincontainer{
+    position: relative;
+    z-index: 0;
+}
+.gallerycontainer{
+    overflow-x: scroll;
+    white-space: nowrap; /*ensure all images stay on the same line*/
+    position: relative;
+    z-index: 1;
+}
+.galleryimage{
+    display: inline-block;
+    width: 502px;
+    margin: -2px;
+}
+.btnright, .btnleft{
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+}
+.btnright{
+    right: 2%;
+}
+.btnleft{
+    left: 2%;
+}
+/* form events */
+#myForm{
+    font-family:'Courier New', Courier, monospace;
+    background-color: cornsilk;
+    width: 300px;
+    margin: 5rem auto;
+    padding: 3rem 5rem;
+}
+.submitbtn{
+    background-color: pink;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    border: outset;
+    color: palevioletred;
+    cursor: pointer;
+    margin-top: 3rem;
+    width: 100%;
+}
+.msg{
+    font-style: italic;
+    color: pink;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.passwordmsg{
+    color: darkblue;
+    font-size: 0.8rem;
+}
+#passwordError{
+    color: crimson;
+    font-style: italic;
+}
+.formsession{
+    margin-top: 1rem;
+}
+.disablebtn{
+    background-color: crimson;
+    cursor: not-allowed;
+}
