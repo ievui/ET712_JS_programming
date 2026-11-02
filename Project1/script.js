@@ -4,14 +4,16 @@ const topics = {
     title: "🌈 Let's Learn Colors!",
     description: "Tap a card to learn a color.",
     items: [
-      { name: "Red", emoji: "🍎", detail: "Red like an apple!", color: "#fcbaba" },
-      { name: "Blue", emoji: "🌊", detail: "Blue like the ocean!", color: "#dceeff" },
-      { name: "Yellow", emoji: "☀️", detail: "Yellow like the sun!", color: "#fff3b0" },
-      { name: "Green", emoji: "🐸", detail: "Green like a frog!", color: "#dff8d8" },
-      { name: "Orange", emoji: "🍊", detail: "Orange like an orange!", color: "#ffe5c4" },
-      { name: "Purple", emoji: "🍇", detail: "Purple like grapes!", color: "#eee0ff" },
-      { name: "Pink", emoji: "🌸", detail: "Pink like a flower!", color: "#f7c4e3"},
-      { name: "Brown", emoji: "🍄‍🟫", detail: "Brown like a mushroom!", color: "#cfae71"}
+      { name: "Red", emoji: "🍎", detail: "Red like an apple!", color: "#ff7171" },
+      { name: "Blue", emoji: "🌊", detail: "Blue like the ocean!", color: "#9fccf6" },
+      { name: "Yellow", emoji: "☀️", detail: "Yellow like the sun!", color: "#fee86a" },
+      { name: "Green", emoji: "🐸", detail: "Green like a frog!", color: "#aeff97" },
+      { name: "Orange", emoji: "🍊", detail: "Orange like an orange!", color: "#ffbe69" },
+      { name: "Purple", emoji: "🍇", detail: "Purple like grapes!", color: "#c5a4ee" },
+      { name: "Pink", emoji: "🌸", detail: "Pink like a flower!", color: "#ffb7e2"},
+      { name: "Brown", emoji: "🍄‍🟫", detail: "Brown like a mushroom!", color: "#845844"},
+      { name: "Black", emoji: "🌃", detail: "Black like the night sky!", color: "#1d1d1d"},
+      { name: "White", emoji: "☁️", detail: "White like the clouds up above!", color: "#d3edff"},
     ],
     questions: [
       { question: "Which fruit is red?", options: ["🍎 Apple", "🍌 Banana", "🍇 Grapes"], answer: "🍎 Apple" },
@@ -24,12 +26,16 @@ const topics = {
     title: "🐶 Let's Meet Animals!",
     description: "Tap an animal to learn its name and sound.",
     items: [
-      { name: "Dog", emoji: "🐶", detail: "A dog says woof!", color: "#fff0d9" },
-      { name: "Cat", emoji: "🐱", detail: "A cat says meow!", color: "#ffe6ef" },
-      { name: "Cow", emoji: "🐮", detail: "A cow says moo!", color: "#e9efff" },
-      { name: "Duck", emoji: "🦆", detail: "A duck says quack!", color: "#fff3b0" },
-      { name: "Lion", emoji: "🦁", detail: "A lion gives a big roar!", color: "#ffe3b8" },
-      { name: "Monkey", emoji: "🐵", detail: "A monkey likes to climb!", color: "#f6e3cf" }
+      { name: "Dog", emoji: "🐶", detail: "A dog says woof!", color: "#ffce85" },
+      { name: "Cat", emoji: "🐱", detail: "A cat says meow!", color: "#d5ffa1" },
+      { name: "Cow", emoji: "🐮", detail: "A cow says moo!", color: "#acc2ff" },
+      { name: "Duck", emoji: "🦆", detail: "A duck says quack!", color: "#ffec82" },
+      { name: "Lion", emoji: "🦁", detail: "The lion makes a big roar!", color: "#ffd18b" },
+      { name: "Pig", emoji: "🐖", detail: "A pig says oink!", color: "#f8a6d7" },
+      { name: "Mouse", emoji: "🐁", detail: "A mouse likes to squeak!", color: "#eee9e3" },
+      { name: "Sheep", emoji: "🐑", detail: "The sheep says baaa!", color: "#d3d9de" },
+      { name: "Elephant", emoji: "🐘", detail: "The elephant makes a trumpet sound!", color: "#b3b2b1" },
+      { name: "Horse", emoji: "🐎", detail: "The horse says neigh!", color: "#fc8570" },
     ],
     questions: [
       { question: "Which animal says meow?", options: ["🐱 Cat", "🐮 Cow", "🦁 Lion"], answer: "🐱 Cat" },
@@ -42,17 +48,22 @@ const topics = {
     title: "🔢 Let's Count Together!",
     description: "Tap a number and count the objects.",
     items: [
-      { name: "One", emoji: "🍓", detail: "1 strawberry!", color: "#ffe0e0" },
-      { name: "Two", emoji: "🦋🦋", detail: "1, 2 butterflies!", color: "#e3efff" },
-      { name: "Three", emoji: "⭐⭐⭐", detail: "1, 2, 3 stars!", color: "#fff3b0" },
-      { name: "Four", emoji: "🐞🐞🐞🐞", detail: "Let's count to four!", color: "#e3f8df" },
-      { name: "Five", emoji: "🌸🌸🌸🌸🌸", detail: "Five pretty flowers!", color: "#ffe6ef" },
-      { name: "Ten", emoji: "🧣🧣🧣🧣🧣🧣🧣🧣🧣🧣", detail: "Great job! You found ten!", color: "#eee0ff" }
+      { name: "One", emoji: "🍓", detail: "1 strawberry!", color: "#fc8080" },
+      { name: "Two", emoji: "🦋🦋", detail: "2 butterflies!", color: "#6faaf7" },
+      { name: "Three", emoji: "🔔🔔🔔", detail: "3 bells!", color: "#f7e479" },
+      { name: "Four", emoji: "🐞🐞🐞🐞", detail: "4 ladybugs!", color: "#8aef76" },
+      { name: "Five", emoji: "🌸🌸🌸🌸🌸", detail: "5 pretty flowers!", color: "#f89cbe" },
+      { name: "Six", emoji: "🦓🦓🦓🦓🦓🦓", detail: "6 zebras!", color: "#ebfafb" },
+      { name: "Seven", emoji: "🎁🎁🎁🎁🎁🎁🎁", detail: "7 presents", color: "#fee87a" },
+      { name: "Eight", emoji: "🪁🪁🪁🪁🪁🪁🪁🪁", detail: "8 kites", color: "#7afefe" },
+      { name: "Nine", emoji: "🎸🎸🎸🎸🎸🎸🎸🎸🎸", detail: "9 guitars", color: "#fe7a7a" },
+      { name: "Ten", emoji: "🧣🧣🧣🧣🧣🧣🧣🧣🧣🧣", detail: "10 scarves!", color: "#f7a5c2" },
+      
     ],
     questions: [
       { question: "How many fingers are on one hand?", options: ["3", "5", "10"], answer: "5" },
       { question: "What number comes after 2?", options: ["1", "3", "5"], answer: "3" },
-      { question: "How many stars are here? ⭐⭐⭐", options: ["2", "3", "4"], answer: "3" }
+      { question: "How many Bells are here? ⭐⭐⭐", options: ["2", "3", "4"], answer: "3" }
     ]
   },
 
@@ -60,12 +71,16 @@ const topics = {
     title: "🔷 Let's Discover Shapes!",
     description: "Tap a shape to learn its name.",
     items: [
-      { name: "Circle", emoji: "🔴", detail: "A circle is round!", color: "#ffe0e0" },
-      { name: "Square", emoji: "🟦", detail: "A square has four equal sides!", color: "#dceeff" },
-      { name: "Triangle", emoji: "🔺", detail: "A triangle has three sides!", color: "#fff3b0" },
-      { name: "Star", emoji: "⭐", detail: "A star has points!", color: "#eee0ff" },
-      { name: "Heart", emoji: "❤️", detail: "A heart is a special shape!", color: "#ffe6ef" },
-      { name: "Diamond", emoji: "💎", detail: "A diamond looks like a tilted square!", color: "#dff8f8" }
+      { name: "Circle", emoji: "🔴", detail: "A circle is round!", color: "#ff9696" },
+      { name: "Square", emoji: "🟦", detail: "A square has four equal sides!", color: "#7cbffe" },
+      { name: "Diamond", emoji: "🔶", detail: "A diamond also has four sides!", color: "#fdc774" },
+      { name: "Triangle", emoji: "🔺", detail: "A triangle has three sides!", color: "#f78eac" },
+      { name: "Pentagon", emoji: "⬟", detail: "A pentagon has five sides!", color: "#d08cfe" },
+      { name: "Star", emoji: "⭐", detail: "This star also has five points!", color: "#fdfe8c" },
+      { name: "Hexagon", emoji: "⬣", detail: "A hexagon contains six sides!", color: "#8cfebf" },
+      { name: "Octagon", emoji: "🛑", detail: "A octagon has eight sides", color: "#f978a7" },
+      { name: "Oval", emoji: "⬬", detail: "Ovals look simmilar to circles!", color: "#add66a" },
+      { name: "Heart", emoji: "❤️", detail: "The heart is a popular shape!", color: "#fe94d9" }
     ],
     questions: [
       { question: "Which shape is round?", options: ["🔴 Circle", "🔺 Triangle", "🟦 Square"], answer: "🔴 Circle" },
