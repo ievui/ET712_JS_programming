@@ -1,0 +1,28 @@
+*{box-sizing: border-box;}
+img{width: 100%; display: block;}
+
+/* USER.JS */
+.card{
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    transition: ease-in-out 100ms;
+    border: solid gray 3px;
+}
+.content{
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+.metadata{
+    font-size: 0.8rem; color: crimson;
+}
+
+/* APP.JS */
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    gap: 2rem;
+}
