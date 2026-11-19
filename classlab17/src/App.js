@@ -8,6 +8,27 @@ function App() {
   // Set an inital state for counter
   let [counter, setcounter] = useState(1)
 
+  // OPEN AND CLOSE BUTTON STATE
+  const[isopen, setIsopen] = useState(false)
+
+  // state to save different inputs from a form
+  const[inputs, setInputs] = useState({})
+
+  // function to handle changes in all inputs
+  const handle_changes = function(event){
+    const name = event.target.name
+    const value = event.target.value
+    //spread statement
+    setInputs(values => ({...values, [name]:value}))
+  }
+
+  // select gender state
+  const[mygender, setMygender] = useState("")
+  // function to pass the selected gender
+  const selectedGender = (event)=>{
+    setMygender(event.target.value)
+  }
+
   return (
     <div className="App">
       <h1 className='title'>Slice by Aaliyah Fowlin</h1>
@@ -27,6 +48,70 @@ function App() {
       </div>
       </section>
 
+    <h1>Open and close session</h1>
+    <section className='container'>
+      <div className='info'>
+        <b>Cat (Felis catus)</b>, commonly reffered to as the domestic cat or house cat. <button onClick={function(){setIsopen(!isopen)}} className='readmorebtn' >{isopen ? "Hide":"Read More"}</button>
+      </div>
+
+      <article>
+        {
+          isopen &&
+          <div className='readmore'>
+            The cat (Felis catus), also called domestic cat and house cat, is a small domesticated carnivorous mammal. It is a member of Felidae, the family of mammals in the order Carnivora also colloquially referred to as cats. An obligate carnivore requiring a predominantly meat-based diet, it has retractable claws adapted to killing small prey species such as mice and rats. It has a strong, flexible body, quick reflexes, and sharp teeth, and its night vision and sense of smell are well developed. It is a social species, but a solitary hunter and a crepuscular predator. Cat communication includes meowing, purring, trilling, hissing, growling, grunting, body language, and scent marking. It can hear sounds too faint or too high in frequency for human ears, such as those made by small mammals. It secretes and perceives pheromones. Cat intelligence is evident in its ability to adapt, learn through observation, and solve problems. The domestic cat is the only domesticated species of the family Felidae.
+          </div>
+        }
+      </article>
+    </section>
+
+    <h1>Forms</h1>
+    <form className='myform'>
+      <fieldset>
+          <legend>Form is ReactJS</legend>
+      <div className='formgroup'>
+        <label>Enter username
+          <input
+            type='text'
+            id='username'
+            className='inputstyle'
+            name='username'
+            placeholder='Type the username...'
+            onChange={handle_changes}
+            value={inputs.username}
+          />
+        </label>
+      </div>
+
+      <div className='formgroup'>
+        <label> Enter a lucky number:
+          <input
+            type='number'
+            id='luckynumber'
+            name='luckynumber'
+            value={inputs.luckynumber}
+            onChange={handle_changes}
+          />
+        </label>
+      </div>
+
+      <div className='formgroup'>
+        <label> Select a gender:
+          <select value={mygender} onChange={selectedGender}>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Others</option>
+          </select>
+        </label>
+      </div>
+
+      <button type='submit' className='btnsubmit'>Submit</button>
+      </fieldset>
+    
+    </form>
+        <h2>Form result</h2>
+        <p>The username = {inputs.username}</p>
+        <p>User lucky number = {inputs.luckynumber}</p>
+        <p>Selected Gender = {mygender}</p>
     </div>
   );
 }
